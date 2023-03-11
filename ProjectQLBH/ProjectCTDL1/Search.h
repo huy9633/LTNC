@@ -34,13 +34,13 @@ nhaplai:
 			for (int i = 0; i < tam.size(); i++) {
 				int y = 5 + k + 3;
 				gotoxy(2, y); cout << k;
-				gotoxy(5, y); cout << hh[i].seri;
-				gotoxy(16, y); cout << hh[i].name;
-				gotoxy(44, y); cout << hh[i].place;
-				gotoxy(58, y); cout << hh[i].color;
-				gotoxy(73, y); cout << hh[i].price;
-				gotoxy(87, y); cout << hh[i].importDate[0] << "/" << hh[i].importDate[1] << "/" << hh[i].importDate[2];
-				gotoxy(106, y); cout << hh[i].amount;
+				gotoxy(5, y); cout << tam[i].seri;
+				gotoxy(16, y); cout << tam[i].name;
+				gotoxy(44, y); cout << tam[i].place;
+				gotoxy(58, y); cout << tam[i].color;
+				gotoxy(73, y); cout << tam[i].price;
+				gotoxy(87, y); cout << tam[i].importDate[0] << "/" << tam[i].importDate[1] << "/" << tam[i].importDate[2];
+				gotoxy(106, y); cout << tam[i].amount;
 				k++;
 			}
 			bangsanpham(0, 5, 3 + k);
