@@ -21,7 +21,7 @@ using namespace std;
 void textcolor(int x);
 void gotoxy(short x, short y);
 void viet(int x, int y, int z);
-int tksanpham(vector <goods> hanghoa, string s);
+vector<goods> tksanpham(vector <goods> hanghoa, string s);
 void khung(int x, int y, int m, int n, int mau);
 void bangsanpham(int x, int y, int sl);
 void TableOrder(int x, int y, int sl);
@@ -66,17 +66,17 @@ void vietchuoi(int x, int y, string s, int mau)
 	textcolor(mau);
 	cout << s;
 }
-int tksanpham(vector <goods> hanghoa, string s)
+vector<goods> tksanpham(vector <goods> hanghoa, string s)
 {
-
+	vector<goods> listGood;
 	for (int i = 0; i < hanghoa.size(); i++)
 	{
-		if (hanghoa[i].name == s)//stricmp so sanh chuoi
+		if (hanghoa[i].name.find(s) != std::string::npos)//stricmp so sanh chuoi
 		{
-			return i;
+			listGood.push_back(hanghoa[i]);
 		}
 	}
-	return -1;
+	return listGood;
 }
 
 void khung(int x, int y, int m, int n, int mau)
