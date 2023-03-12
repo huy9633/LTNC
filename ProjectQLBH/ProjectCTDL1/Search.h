@@ -19,6 +19,10 @@ nhaplai:
 			system("cls");
 			return;
 		}
+		if (s.empty()) {
+			system("cls");
+			goto nhaplai;
+		}
 		vietchuoi(75, 4, "                                     ", 12);
 		vector<goods> tam = tksanpham(hh, s);
 		if (tam.empty()) {

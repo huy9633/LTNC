@@ -1,1 +1,20 @@
-﻿  ProjectCTDL1.vcxproj -> C:\Huy\Projects\ProjectCTDL1\Debug\ProjectCTDL1.exe
+﻿  Main.cpp
+C:\Users\ASUS\OneDrive\Máy tính\LTNC\LTNC\ProjectQLBH\ProjectCTDL1\Menu.h(72,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\OneDrive\Máy tính\LTNC\LTNC\ProjectQLBH\ProjectCTDL1\GoodManagement.h(31,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\OneDrive\Máy tính\LTNC\LTNC\ProjectQLBH\ProjectCTDL1\GoodManagement.h(32,25): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\OneDrive\Máy tính\LTNC\LTNC\ProjectQLBH\ProjectCTDL1\GoodManagement.h(46,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\OneDrive\Máy tính\LTNC\LTNC\ProjectQLBH\ProjectCTDL1\GoodManagement.h(65,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\OneDrive\Máy tính\LTNC\LTNC\ProjectQLBH\ProjectCTDL1\orders.h(48,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\OneDrive\Máy tính\LTNC\LTNC\ProjectQLBH\ProjectCTDL1\OrdersProcessing.h(41,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\OneDrive\Máy tính\LTNC\LTNC\ProjectQLBH\ProjectCTDL1\OrdersProcessing.h(42,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\OneDrive\Máy tính\LTNC\LTNC\ProjectQLBH\ProjectCTDL1\OrdersProcessing.h(57,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\OneDrive\Máy tính\LTNC\LTNC\ProjectQLBH\ProjectCTDL1\OrdersProcessing.h(58,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\OneDrive\Máy tính\LTNC\LTNC\ProjectQLBH\ProjectCTDL1\Search.h(3,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\ASUS\OneDrive\Máy tính\LTNC\LTNC\ProjectQLBH\ProjectCTDL1\Search.h(4,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\ASUS\OneDrive\Máy tính\LTNC\LTNC\ProjectQLBH\ProjectCTDL1\Search.h(34,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\OneDrive\Máy tính\LTNC\LTNC\ProjectQLBH\ProjectCTDL1\Display.h(3,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\ASUS\OneDrive\Máy tính\LTNC\LTNC\ProjectQLBH\ProjectCTDL1\Display.h(4,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\ASUS\OneDrive\Máy tính\LTNC\LTNC\ProjectQLBH\ProjectCTDL1\CheckAndReport.h(23,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\OneDrive\Máy tính\LTNC\LTNC\ProjectQLBH\ProjectCTDL1\CheckAndReport.h(63,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\OneDrive\Máy tính\LTNC\LTNC\ProjectQLBH\ProjectCTDL1\Menu.h(43): warning C4715: 'keyboard': not all control paths return a value
+  ProjectCTDL1.vcxproj -> C:\Users\ASUS\OneDrive\Máy tính\LTNC\LTNC\ProjectQLBH\Debug\ProjectCTDL1.exe
