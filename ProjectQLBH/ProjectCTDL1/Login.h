@@ -17,7 +17,8 @@ void chose(vector<goods>& hh, vector< vector <orders> >& dh) {
 	int qq = 1;
 	khung(44, 5, 40, 2, 14); vietchuoi(45, 6, "Quan ly don hang", 15);
 	khung(44, 8, 40, 2, 0); vietchuoi(45, 9, "Xu ly don hang", 6);
-	khung(44, 11, 40, 2, 0); vietchuoi(45, 12, "Quay Lai Menu", 6);
+	khung(44, 11, 40, 2, 0); vietchuoi(45, 12, "Thong Ke", 6);
+	khung(44, 14, 40, 2, 0); vietchuoi(45, 12, "Quay Lai Menu", 6);
 	for (;;) {
 		gotoxy(0, 0);
 		int k = keyboard();
@@ -27,19 +28,29 @@ void chose(vector<goods>& hh, vector< vector <orders> >& dh) {
 				qq = 2;
 				khung(x + 44, y + 5, 40, 2, 0);		vietchuoi(x + 45, y + 6, "Quan ly don hang", 6);
 				khung(x + 44, y + 8, 40, 2, 14);	vietchuoi(x + 45, y + 9, "Xu ly don hang", 15);
-				khung(x + 44, y + 11, 40, 2, 0);	vietchuoi(x + 45, y + 12, "Quay Lai Menu", 6);
+				khung(x + 44, y + 11, 40, 2, 0);	vietchuoi(x + 45, y + 12, "Thong Ke", 6);
+				khung(x + 44, y + 14, 40, 2, 0);	vietchuoi(x + 45, y + 15, "Quay Lai Menu", 6);
 			}
 			else if (qq == 2) {
 				qq = 3;
 				khung(x + 44, y + 5, 40, 2, 0);		vietchuoi(x + 45, y + 6, "Quan ly don hang", 6);
-				khung(x + 44, y + 8, 40, 2, 0);		vietchuoi(x + 45, y + 9, "Xu ly don hang", 6);
-				khung(x + 44, y + 11, 40, 2, 14);	vietchuoi(x + 45, y + 12, "Quay Lai Menu", 15);
+				khung(x + 44, y + 8, 40, 2, 0);		vietchuoi(x + 45, y + 9, "Xu ly don hang", 6); 
+				khung(x + 44, y + 11, 40, 2, 14);	vietchuoi(x + 45, y + 12, "Thong Ke", 15);
+				khung(x + 44, y + 14, 40, 2, 0);	vietchuoi(x + 45, y + 15, "Quay Lai Menu", 6);
 			}
 			else if (qq == 3) {
+				qq = 4;
+				khung(x + 44, y + 5, 40, 2, 0);	vietchuoi(x + 45, y + 6, "Quan ly don hang", 6);
+				khung(x + 44, y + 8, 40, 2, 0);		vietchuoi(x + 45, y + 9, "Xu ly don hang", 6);
+				khung(x + 44, y + 11, 40, 2, 0);	vietchuoi(x + 45, y + 12, "Thong Ke", 6);
+				khung(x + 44, y + 14, 40, 2, 14);	vietchuoi(x + 45, y + 15, "Quay Lai Menu", 15);
+			}
+			else if (qq == 4) {
 				qq = 1;
 				khung(x + 44, y + 5, 40, 2, 14);	vietchuoi(x + 45, y + 6, "Quan ly don hang", 15);
 				khung(x + 44, y + 8, 40, 2, 0);		vietchuoi(x + 45, y + 9, "Xu ly don hang", 6);
-				khung(x + 44, y + 11, 40, 2, 0);	vietchuoi(x + 45, y + 12, "Quay Lai Menu", 6);
+				khung(x + 44, y + 11, 40, 2, 0);	vietchuoi(x + 45, y + 12, "Thong Ke", 6);
+				khung(x + 44, y + 14, 40, 2, 0);	vietchuoi(x + 45, y + 15, "Quay Lai Menu", 6);
 			}
 		}
 		else if (k == 1) {
@@ -135,7 +146,9 @@ void LOGIN(vector<goods>& hh, vector< vector <orders> >& dh)
 			{
 				is >> ider >> passer;
 				if (id == ider && pass == passer) {
-					vietchuoi(20, 9, "Dang Nhap Thanh Cong !", 10);
+					vietchuoi(20, 9, "Cho Xac Thuc...", 12); 
+					Sleep(1500);
+					vietchuoi(20, 12, "Dang Nhap Thanh Cong !", 10);
 					Sleep(1000);
 					system("cls");
 					chose(hh, dh);
