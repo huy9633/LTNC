@@ -33,7 +33,7 @@ nhaplai:
 		}
 		else {
 			int k = 0;
-			vietchuoi(112 - 20, 4, "Nhan [ESC] de tro ve", 12);
+			vietchuoi(85 - 20,4, "Nhan [ESC] de tro ve | [Enter] de tiep tuc tim kiem", 12); 
 			textcolor(14);
 			for (int i = 0; i < tam.size(); i++) {
 				int y = 5 + k + 3;
@@ -52,6 +52,11 @@ nhaplai:
 				int h = keyboard();
 				if (h == 4) {
 					system("cls");
+					return;
+				}
+				if (h == 3) {
+					system("cls");
+					goto nhaplai;
 					return;
 				}
 			}

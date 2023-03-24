@@ -138,7 +138,7 @@ void bangsanpham(int x, int y, int sl)
 	vietchuoi(x + 5, y + 1, "Ma hang", 11);
 	vietchuoi(x + 16, y + 1, "Ten san pham", 11);
 	vietchuoi(x + 44, y + 1, "Noi san xuat", 11);
-	vietchuoi(x + 58, y + 1, "Mau sac", 11);
+	vietchuoi(x + 58, y + 1, "Don vi do", 11);
 	vietchuoi(x + 73, y + 1, "Gia Ban", 11);
 	vietchuoi(x + 87, y + 1, "Ngay nhap kho", 11);
 	vietchuoi(x + 106, y + 1, "So luong", 11);

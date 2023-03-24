@@ -1,42 +1,42 @@
-VNXX
+HH01
 Xuc Xich
 Viet Nam
 Do
 10000
 11 12 2021 
-70
-CNMT
+600
+HH02
 Milk Tea
 Trung Quoc
 Xanh
 15000
 15 12 2021 
 100
-HNDH
+HH03
 Banh Trung Thu
 VN
 Vang
 45000
 24 10 2021 
-480
-PAAA
+100
+HH04
 Pin AAA
 VN
 Do
 3000
 25 10 2021 
-470
-3000
-25 10 2021 
-500
+100
+HH05
+Tivi
+100
 TSDL
-0
+25000
 25 10 2021 
-500
-Tra
+100
+HH06
 Sua Dai Loan
 Dai Loan
-0
+Tim
 25
-10 2021 1000 
-500
+10 10 2021 
+100
