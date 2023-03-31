@@ -186,5 +186,42 @@ void TableOrder(int x, int y, int sl)
 	vietchuoi(x + 106, y + 1, "Tong Tien", 11);
 	//		vietchuoi(x+105,y+1,"Thanh tien",11);
 }
-
+void TableStatistical(int x, int y, int sl)
+{
+	int i, j;
+	textcolor(2);
+	for (i = x; i <= x + 70; i++)
+		for (j = y; j <= y + sl; j++)
+		{
+			if (i == x || i == x + 4 || i == x + 15 || i == x + 38 || i == x + 54 || i == x + 70)
+			{
+				if (j == y && i != x && i != x + 70)
+					viet(i, j, 45);
+				else if (j == y && i != x + 70)
+					viet(i, j, 45);
+				else if (j == y && i != x)
+					viet(i, j, 45);
+				else if (j == y + 2 && i != x && i != x + 70)
+					viet(i, j, 45);
+				else if (j == y + 2 && i != x + 70)
+					viet(i, j, 45);
+				else if (j == y + 2 && i != x)
+					viet(i, j, 45);
+				else if (j == y + sl && i != x && i != x + 70)
+					viet(i, j, 45);
+				else if (j == y + sl && i != x + 70)
+					viet(i, j, 45);
+				else if (j == y + sl && i != x)
+					viet(i, j, 45);
+				else viet(i, j, 124);
+			}
+			else if (j == y || j == y + 2 || j == y + sl)
+				viet(i, j, 45);
+		}
+	vietchuoi(x + 1, y + 1, "STT", 11);
+	vietchuoi(x + 5, y + 1, "Ma hang", 11);
+	vietchuoi(x + 16, y + 1, "Ten san pham", 11);
+	vietchuoi(x + 40, y + 1, "So Luong Nhap", 11);
+	vietchuoi(x + 56, y + 1, "So Luong Xuat", 11); 
+}
 #endif

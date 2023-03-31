@@ -7,11 +7,11 @@
 
 void CHECKANDREPORT(vector<goods> hanghoa) {
 	Input(hanghoa);
-	orders x;
+	orders x; 
 	bool test = false;
 	int count = 1, i;
-	ofstream os;
-	os.open("DonHang.txt", fstream::app);
+	ofstream os, os1;
+	os.open("DonHang.txt", fstream::app); os1.open("ThongKe.txt", fstream::app);
 	vector< vector<orders> > order;
 	bool check = true;
 	int n = 0;
@@ -68,9 +68,9 @@ void CHECKANDREPORT(vector<goods> hanghoa) {
 				//  hang hoa trong kho phai lon hon hoac bang so luong hang hoa nhap
 				if (hanghoa[i].amount >= x.amount)
 				{
-
 					hanghoa[i].amount -= x.amount;
-					os << x << endl;
+					//In vao file DonHangTxT
+					os << x << endl; 
 					count++;
 					gotoxy(2, 3 + n); cout << n+1;
 					gotoxy(6, 3 + n ); cout << x.seri;

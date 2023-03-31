@@ -4,7 +4,8 @@
 #include"orders.h"
 #include"GoodManagement.h"
 using namespace std;
-
+extern int CheckOut[30];
+extern bool checkUpdate;
 void getData(vector< vector<orders> >& _dh) {
 	_dh.clear();
 	ifstream input;
@@ -53,11 +54,12 @@ void updateFileOrders(vector< vector <orders> > dh) {
 	file.close();
 }
 
-void process(vector< vector <orders> >& dh, vector<goods>& hh) {
+void process(vector< vector <orders> >& dh, vector<goods>& hh ) {
 	for (int i = 0; i < dh[0].size(); i++) {
 		for (int j = 0; j < hh.size(); j++) {
 			if (dh[0][i].seri == hh[j].seri) {
-				hh[j].amount = hh[j].amount - dh[0][i].amount;
+				hh[j].amount = hh[j].amount - dh[0][i].amount; 
+				CheckOut[i] = CheckOut[i] + dh[0][i].amount;
 				goto out;
 			}
 		}
@@ -66,7 +68,7 @@ void process(vector< vector <orders> >& dh, vector<goods>& hh) {
 	dh.erase(dh.begin());
 }
 
-void ORDERS_PROCESSING(vector< vector <orders> >& dh, vector<goods>& hh) {
+void ORDERS_PROCESSING(vector< vector <orders> >& dh, vector<goods>& hh ) {
 	int count = 1;
 	bool check = false;
 	getData(dh);
@@ -74,13 +76,16 @@ void ORDERS_PROCESSING(vector< vector <orders> >& dh, vector<goods>& hh) {
 	while (dh.size() != 0) {
 		getData(dh);
 		check = true;
-		process(dh, hh);
+		process(dh, hh );
 		updateGoods(hh);
 		updateFileOrders(dh);
 		cout << "Xu Ly Xong Don Hang Thu " << count << endl;
 		count++;
 	}
-	if(check) cout << "Don Hang Xu Ly Thanh Cong !";
+	if (check) {
+		cout << "Don Hang Xu Ly Thanh Cong !";
+		checkUpdate = false;
+	}
 	else cout << "Hien tai khong co Don Hang nao !";
 	Sleep(1000);
 	system("cls");

@@ -3,9 +3,14 @@
 #include"Search.h"
 #include"Display.h"
 #include"CheckAndReport.h"
-#include"Login.h"
-
+#include"Login.h" 
+#include"Statistical.h"
 using namespace std;
+
+bool checkUpdate = true;
+int CheckIn[30];
+int CheckOut[30];
+
 
 class Goods {
 protected:
@@ -28,6 +33,7 @@ public:
 	}
 };
 
+
 class Orders {
 protected:
 	vector< vector <orders> > dh;
@@ -35,26 +41,43 @@ public:
 	vector< vector <orders> >& getDH() {
 		return dh;
 	}
-	void orderProcessing(Goods& g) {
-		ORDERS_PROCESSING(dh, g.getHH());
+	void orderProcessing(Goods& g ) {
+		ORDERS_PROCESSING(dh, g.getHH() );
 	}
 	void checkAndReport(Goods g) {
 		CHECKANDREPORT(g.getHH());
 	}
 };
 
-void Menu(Goods g, Orders od);
+class Statisticals {
+protected:
+	vector <statisticals>  tk;
+public:
+	vector <statisticals> & getTK() {
+		return tk;
+	}
 
-int main() {
+	void Statistical(Goods& g, Orders& od) {
+		STATISTICAL( tk, g.getHH(), od.getDH());
+	}
+	bool inputtk() {
+		return InputTK(tk);
+	}
+};
+
+void Menu(Goods g, Orders od, Statisticals tk);
+
+int main() { 
 	Goods a;
 	Orders od;
+	Statisticals tk;
 	if (a.input()) {
-		Menu(a, od);
+		Menu(a, od,tk);
 	}
 	return 0;
 }
 
-void Menu(Goods g, Orders od) {
+void Menu(Goods g, Orders od, Statisticals tk) {
 	khung(30, 1, 67, 2, 14);
 	khung(30, 3, 67, 17, 14);
 	vietchuoi(30 + 20, 1 + 1, "CHUONG TRINH QUAN LY BAN HANG", 228);
@@ -156,22 +179,22 @@ void Menu(Goods g, Orders od) {
 			if (kt == 1) {
 				system("cls");
 				g.Display();
-				Menu(g, od);
+				Menu(g, od,tk);
 			}
 			else if (kt == 2) {
 				system("cls");
 				g.Search();
-				Menu(g, od);
+				Menu(g, od, tk);
 			}
 			else if (kt == 3) {
 				system("cls");
 				od.checkAndReport(g);
-				Menu(g, od);
+				Menu(g, od, tk);
 			}
 			else if (kt == 4) {
 				system("cls");
-				LOGIN(g.getHH(), od.getDH());
-				Menu(g, od);
+				LOGIN(g.getHH(), od.getDH(),tk.getTK());
+				Menu(g, od, tk);
 			}
 			else if (kt == 5) {
 				system("cls");

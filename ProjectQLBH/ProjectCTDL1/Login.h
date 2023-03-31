@@ -4,6 +4,7 @@
 #include"Menu.h"
 #include"GoodManagement.h"
 #include"OrdersProcessing.h"
+#include "Statistical.h"
 
 using namespace std;
 HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -12,8 +13,9 @@ void Color(int color)
 	SetConsoleTextAttribute(console, color);
 }
 
-void chose(vector<goods>& hh, vector< vector <orders> >& dh) {
+void chose(vector<goods>& hh, vector< vector <orders> >& dh, vector < statisticals >& tk) {
 	khung(30, 3, 67, 17, 14);
+
 	int qq = 1;
 	khung(44, 5, 40, 2, 14); vietchuoi(45, 6, "Quan ly don hang", 15);
 	khung(44, 8, 40, 2, 0); vietchuoi(45, 9, "Xu ly don hang", 6);
@@ -96,7 +98,7 @@ void chose(vector<goods>& hh, vector< vector <orders> >& dh) {
 			}
 			else if (qq == 3) {
 				system("cls");
-
+				STATISTICAL(tk,hh,dh);
 				goto tieptuc;
 			}
 			else if (qq == 4) {
@@ -106,11 +108,11 @@ void chose(vector<goods>& hh, vector< vector <orders> >& dh) {
 		}
 	}
 tieptuc:
-	chose(hh, dh);
+	chose(hh, dh,tk);
 end:;
 }
 
-void LOGIN(vector<goods>& hh, vector< vector <orders> >& dh)
+void LOGIN(vector<goods>& hh, vector< vector <orders> >& dh, vector < statisticals > tk)
 {
 	ifstream is;
 	is.open("Admin.txt");
@@ -166,7 +168,7 @@ void LOGIN(vector<goods>& hh, vector< vector <orders> >& dh)
 					vietchuoi(20, 11, "Dang Nhap Thanh Cong !", 10);
 					Sleep(1000);
 					system("cls");
-					chose(hh, dh);
+					chose(hh, dh, tk);
 					goto out;
 				}
 

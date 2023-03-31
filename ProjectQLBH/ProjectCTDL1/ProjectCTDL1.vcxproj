@@ -145,6 +145,7 @@
     <Text Include="Admin.txt" />
     <Text Include="DonHang.txt" />
     <Text Include="HangHoa.txt" />
+    <Text Include="ThongKe.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CheckAndReport.h" />
@@ -157,6 +158,7 @@
     <ClInclude Include="OrdersProcessing.h" />
     <ClInclude Include="Search.h" />
     <ClInclude Include="Statistical.h" />
+    <ClInclude Include="statisticals.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

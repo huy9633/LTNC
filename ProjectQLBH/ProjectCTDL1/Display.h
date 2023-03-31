@@ -13,13 +13,13 @@ void HT(vector<goods> hh) {
 	int num = hh.size();
 	if (hh[num-1].seri == "") {
 		num--;
-	}
+	}	
 	if (hh.empty()) {
 		vietchuoi(50, 1, "[Hien Tai Chua Co Hang Hoa]", 12);
 		Sleep(1500);
 		return;
 	}
-	vietchuoi(50, 1, "Nhan [ESC] de tro ve ", 12);
+	vietchuoi(50, 1, "Nhan [ESC] de tro ve ", 12); 
 	bangsanpham(0, 2, n);
 	for (int i = 0; i < num; i++) {
 		int y = 5 + i;

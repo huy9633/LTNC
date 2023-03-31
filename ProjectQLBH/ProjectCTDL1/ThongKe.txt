@@ -1,0 +1,30 @@
+HH01
+Xuc Xich
+400
+100
+
+HH02
+Milk Tea
+100
+0
+
+HH03
+Banh Trung Thu
+100
+0
+
+HH04
+Pin AAA
+100
+0
+
+HH05
+Tivi
+100
+0
+
+HH06
+Sua Dai Loan
+100
+0
+
