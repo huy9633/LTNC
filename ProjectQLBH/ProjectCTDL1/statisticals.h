@@ -8,28 +8,27 @@
 
 using namespace std;
 
-struct statisticals { 
+struct statisticals {
 	string seri;
 	string name;
 	int amountIn;
 	int amountOut;
-	
-	friend istream& operator >> (istream& is, statisticals& statisticals) { 
+	friend istream& operator >> (istream& is, statisticals& statisticals) {
 		is >> statisticals.seri; is.ignore();
 		getline(is, statisticals.name);	is.clear();
 		is >> statisticals.amountIn;					is.ignore();
-		is >> statisticals.amountOut;					is.ignore(); 
+		is >> statisticals.amountOut;					is.ignore();
 		return is;
 	}
-	friend ostream& operator << (ostream& os, statisticals statisticals) { 
+	friend ostream& operator << (ostream& os, statisticals statisticals) {
 		os << statisticals.seri << endl;
 		os << statisticals.name << endl;
 		os << statisticals.amountIn << endl;
-		os << statisticals.amountOut << endl;
-		 
+		os << statisticals.amountOut;
+
 		return os;
 	}
-	
+
 };
 
 #endif
