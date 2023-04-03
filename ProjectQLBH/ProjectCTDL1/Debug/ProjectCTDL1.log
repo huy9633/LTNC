@@ -17,8 +17,9 @@ C:\Users\ASUS\OneDrive\Máy tính\ShareLab03-Nhom\LTNC\ProjectQLBH\ProjectCTDL1\
 C:\Users\ASUS\OneDrive\Máy tính\ShareLab03-Nhom\LTNC\ProjectQLBH\ProjectCTDL1\CheckAndReport.h(23,22): warning C4018: '<': signed/unsigned mismatch
 C:\Users\ASUS\OneDrive\Máy tính\ShareLab03-Nhom\LTNC\ProjectQLBH\ProjectCTDL1\CheckAndReport.h(63,21): warning C4018: '<': signed/unsigned mismatch
 C:\Users\ASUS\OneDrive\Máy tính\ShareLab03-Nhom\LTNC\ProjectQLBH\ProjectCTDL1\Statistical.h(3,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\ASUS\OneDrive\Máy tính\ShareLab03-Nhom\LTNC\ProjectQLBH\ProjectCTDL1\Statistical.h(53,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\ASUS\OneDrive\Máy tính\ShareLab03-Nhom\LTNC\ProjectQLBH\ProjectCTDL1\Statistical.h(66,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\ASUS\OneDrive\Máy tính\ShareLab03-Nhom\LTNC\ProjectQLBH\ProjectCTDL1\Statistical.h(90,9): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\OneDrive\Máy tính\ShareLab03-Nhom\LTNC\ProjectQLBH\ProjectCTDL1\Statistical.h(67,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\OneDrive\Máy tính\ShareLab03-Nhom\LTNC\ProjectQLBH\ProjectCTDL1\Statistical.h(82,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\OneDrive\Máy tính\ShareLab03-Nhom\LTNC\ProjectQLBH\ProjectCTDL1\Statistical.h(95,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\OneDrive\Máy tính\ShareLab03-Nhom\LTNC\ProjectQLBH\ProjectCTDL1\Statistical.h(119,9): warning C4018: '<': signed/unsigned mismatch
 C:\Users\ASUS\OneDrive\Máy tính\ShareLab03-Nhom\LTNC\ProjectQLBH\ProjectCTDL1\Menu.h(43): warning C4715: 'keyboard': not all control paths return a value
   ProjectCTDL1.vcxproj -> C:\Users\ASUS\OneDrive\Máy tính\ShareLab03-Nhom\LTNC\ProjectQLBH\Debug\ProjectCTDL1.exe
