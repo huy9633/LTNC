@@ -9,7 +9,7 @@ using namespace std;
 extern bool checkUpdate;
 extern int CheckIn[30];
 extern int CheckOut[30];
-
+extern string _Seri;
 bool is_empty1(ifstream& pFile)
 {
 	return pFile.peek() == ifstream::traits_type::eof();
@@ -76,7 +76,13 @@ void addStatisticals(vector<statisticals>& tk, vector<goods>& hh, int Count) {
 	}
 	file.close();
 }
-
+void DeleteStatisticals(vector<statisticals>& tk) {
+	for (int i = 0; i < tk.size(); i++) {
+		if (tk[i].seri == _Seri) {
+			tk.erase(tk.begin() + i);
+		}
+	}
+}
 void UpdateStatisticals(vector<statisticals>& tk) {
 	//chỉnh sửa số lượng nhập và xuất
 	for (int i = 0; i < tk.size(); i++)
@@ -127,18 +133,21 @@ end:;
 }
 
 void STATISTICAL(vector <statisticals>& tk, vector<goods>& hh, vector< vector <orders> >& dh) {
+	int CountStatistical;
+	CountStatistical = tk.size(); int CountHH = hh.size();
 	if (!checkUpdate) {
+		if (CountStatistical > CountHH) {
+			DeleteStatisticals(tk);
+		}
 		UpdateStatisticals(tk);
 		checkUpdate = true;
 	}
 	if (checkFile(tk)) { GetDataStatistical(tk, hh); }
-	int CountStatistical;
-	CountStatistical = tk.size(); int CountHH = hh.size();
+
 	if (CountStatistical < CountHH) {
 		addStatisticals(tk, hh, CountHH);
 	}
 	InputTK(tk);
-
 	int n = tk.size() + 3;
 	int num = tk.size();
 	if (tk[num - 1].seri == "") {

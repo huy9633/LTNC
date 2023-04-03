@@ -6,13 +6,14 @@
 #include"Statisticals.h"
 extern bool checkUpdate;
 extern int CheckIn[30];
+extern string _Seri;
 using namespace std;
 
 bool Input(vector<goods>& _hh) {
 	_hh.clear();
 	ifstream input;
-	
-	input.open("HangHoa.txt"); 
+
+	input.open("HangHoa.txt");
 
 	if (input.is_open()) {
 		while (!input.eof()) {
@@ -33,7 +34,7 @@ void updateGoods(vector<goods>& hh) {
 	// Neu ma hang ton tai thi cap nhat lai so luong hang hoa tuong ung hoac sua thuoc tinh hang hoa
 	for (int i = 0; i < hh.size(); i++) {
 		for (int j = i + 1; j < hh.size(); j++) {
-			if (hh[i].seri == hh[j].seri) { 
+			if (hh[i].seri == hh[j].seri) {
 				hh[i].price = hh[j].price;
 				hh[i].name = hh[j].name;
 				hh[i].importDate[0] = hh[j].importDate[0];
@@ -74,6 +75,7 @@ bool deleteGoods(vector<goods>& hh, string _seri) {
 	bool report = false;
 	for (int i = 0; i < hh.size(); i++) {
 		if (hh[i].seri == _seri) {
+			_Seri = _seri;
 			hh.erase(hh.begin() + i);
 			report = true;
 		}
@@ -81,7 +83,7 @@ bool deleteGoods(vector<goods>& hh, string _seri) {
 	//if (report) cout << "Ma hang hoa khong ton tai !" << endl;
 	return report;
 }
-void GOODS_MANAGEMENT(vector<goods>& hh ) {
+void GOODS_MANAGEMENT(vector<goods>& hh) {
 	khung(30, 3, 67, 17, 14);
 	int ck = 1;
 	int x = 0, y = 0;
@@ -163,8 +165,7 @@ void GOODS_MANAGEMENT(vector<goods>& hh ) {
 			}
 			else if (ck == 1) {
 				goods add;
-				 
-				cinSeri:
+			cinSeri:
 				system("cls");
 				vietchuoi(x + 1, y + 0, "Nhap Hang Hoa: ", 6);
 				bangsanpham(1, 1, 4);
@@ -183,8 +184,7 @@ void GOODS_MANAGEMENT(vector<goods>& hh ) {
 				gotoxy(91, 4); cin >> add.importDate[1]; gotoxy(93, 4); cout << "/";
 				gotoxy(94, 4); cin >> add.importDate[2];
 				gotoxy(106, 4); cin >> add.amount;
-				addGoods(hh, add);
-				
+				addGoods(hh, add); 
 				vietchuoi(40, 6, "Da Them Hang Hoa !", 10);
 				Sleep(1000);
 			}
@@ -197,6 +197,7 @@ void GOODS_MANAGEMENT(vector<goods>& hh ) {
 				if (deleteGoods(hh, s)) {
 					system("cls");
 					vietchuoi(40, 6, "Da Xoa Ma Hang Hoa !", 10);
+					checkUpdate = false;
 					Sleep(1000);
 				}
 				else {
@@ -220,10 +221,10 @@ void GOODS_MANAGEMENT(vector<goods>& hh ) {
 			goto tieptuc;
 		}
 	}
-	tieptuc:
+tieptuc:
 	system("cls");
 	GOODS_MANAGEMENT(hh);
-	end:;
+end:;
 }
 
 #endif

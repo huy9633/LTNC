@@ -10,7 +10,7 @@ using namespace std;
 bool checkUpdate = true;
 int CheckIn[30];
 int CheckOut[30];
-
+string _Seri;
 
 class Goods {
 protected:
@@ -41,8 +41,8 @@ public:
 	vector< vector <orders> >& getDH() {
 		return dh;
 	}
-	void orderProcessing(Goods& g ) {
-		ORDERS_PROCESSING(dh, g.getHH() );
+	void orderProcessing(Goods& g) {
+		ORDERS_PROCESSING(dh, g.getHH());
 	}
 	void checkAndReport(Goods g) {
 		CHECKANDREPORT(g.getHH());
@@ -53,12 +53,12 @@ class Statisticals {
 protected:
 	vector <statisticals>  tk;
 public:
-	vector <statisticals> & getTK() {
+	vector <statisticals>& getTK() {
 		return tk;
 	}
 
 	void Statistical(Goods& g, Orders& od) {
-		STATISTICAL( tk, g.getHH(), od.getDH());
+		STATISTICAL(tk, g.getHH(), od.getDH());
 	}
 	bool inputtk() {
 		return InputTK(tk);
@@ -67,12 +67,12 @@ public:
 
 void Menu(Goods g, Orders od, Statisticals tk);
 
-int main() { 
+int main() {
 	Goods a;
 	Orders od;
 	Statisticals tk;
 	if (a.input()) {
-		Menu(a, od,tk);
+		Menu(a, od, tk);
 	}
 	return 0;
 }
@@ -179,7 +179,7 @@ void Menu(Goods g, Orders od, Statisticals tk) {
 			if (kt == 1) {
 				system("cls");
 				g.Display();
-				Menu(g, od,tk);
+				Menu(g, od, tk);
 			}
 			else if (kt == 2) {
 				system("cls");
@@ -193,7 +193,7 @@ void Menu(Goods g, Orders od, Statisticals tk) {
 			}
 			else if (kt == 4) {
 				system("cls");
-				LOGIN(g.getHH(), od.getDH(),tk.getTK());
+				LOGIN(g.getHH(), od.getDH(), tk.getTK());
 				Menu(g, od, tk);
 			}
 			else if (kt == 5) {
